@@ -1,0 +1,20 @@
+1.Create a clear file structure -index.html , index.css , index.js;
+
+2.Put all the nesseciary files (package.son etc) in the folder of project
+
+3.Describe the table in html (the cells containing data)
+
+4.Create all the needed values in js for the cells holding data in html
+
+4.1 Function to dynamically generate cells with requested values;
+4.2 Collect values from input fields;
+4.3 Create object describing data structure;
+
+5. Create the functions (sum, subtractions etc) using data
+5.1 Calculate annual total;
+5.2 Calculate total per month;
+5.3 Add individual items (cells ) together;
+5.4 The possibility to remove individual cells (ex. if somebody plans to cut expenses)
+
+6. To adorn the project with CSS.
+
