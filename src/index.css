@@ -1,3 +1,77 @@
-th {
-  margin: 15px;
+#container {
+  display: flex;
+  flex-direction: row;
+}
+#twoforms {
+  display: flex;
+  flex-direction: row;
+}
+#yearfield {
+  margin: 10px;
+}
+.resultitem {
+  display: flex;
+  flex-direction: row;
+}
+
+#firsthalf {
+  width: 50%;
+  box-sizing: border-box;
+  padding: 50px 20px;
+}
+
+#secondhalf {
+  width: 50%;
+  box-sizing: border-box;
+  padding: 50px 20px;
+}
+
+#sbmt {
+  min-width: 100px;
+  display: block;
+  margin: 0 auto;
+}
+
+#food {
+  margin: 5px 0px;
+}
+
+#internet {
+  margin: 5px 0px;
+}
+
+#eltable {
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+}
+
+#gastable {
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+}
+
+#cwttable {
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+}
+
+#hwttable {
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+}
+
+#resultitem {
+  display: flex;
+  flex-direction: row;
+}
+
+#fdiv {
+  padding: 10px;
+  border: solid 2px red;
+  max-width: 200px;
+  margin: 0 auto;
 }

@@ -12,34 +12,106 @@
 <body>
   /* Dropdown list with names of the months */
   <p>Please, select the months from the list below :</p>
-  <form action="">
-    <select id="monthslist" name="months">
-      <option id="January" value="January">January</option>
-      <option id="February" value="February"> February</option>
-      <option id="March" value="March">March</option>
-      <option id="April" value="April">April</option>
-      <option id="May" value="May">May</option>
-      <option id="June" value="June">June</option>
-      <option id="July" value="July">July</option>
-      <option id="August" value="August">August</option>
-      <option id="September" value="September">September</option>
-      <option id="October" value="October">October</option>
-      <option id="November" value="November">November</option>
-      <option id="December" value="December">December</option>
-    </select>
-    <input id="sbmt" type="submit">
+  <div id="twoforms">
+    <form id="form" action="">
+      <select id="monthslist" name="months">
+        <option id="January" value="January">January</option>
+        <option id="February" value="February"> February</option>
+        <option id="March" value="March">March</option>
+        <option id="April" value="April">April</option>
+        <option id="May" value="May">May</option>
+        <option id="June" value="June">June</option>
+        <option id="July" value="July">July</option>
+        <option id="August" value="August">August</option>
+        <option id="September" value="September">September</option>
+        <option id="October" value="October">October</option>
+        <option id="November" value="November">November</option>
+        <option id="December" value="December">December</option>
+        <input id="yearfield" type="number" placeholder="Enter a year"></input>
+  </div>
+  </select>
+  <div id="container">
+    <div id="firsthalf">
+      <table id="Electricity">
+        <tr>
+          <p>Electricity</p>
+          <td>
+            <input name="counter" type="text" placeholder="Electricity counter data"></input>
+          </td>
+          <td>
+            <input name="period" type="text" placeholder="Monthly"></input>
+          </td>
+          <td>
+            <input name="rate" type="text" placeholder="Rate"></input>
+          </td>
+        </tr>
+      </table>
+      <table id="Gas">
+        <tr>
+          <p>Gas</p>
+          <td>
+            <input name="counter" type="text" placeholder="Gas counter data"></input>
+          </td>
+          <td>
+            <input name="period" type="text" placeholder="Monthly"></input>
+          </td>
+          <td>
+            <input name="rate" type="text" placeholder="Rate"></input>
+          </td>
+        </tr>
+      </table>
+      <table id="Food">
+        <tr>
+          <p>Food</p>
+          <td>
+            <input name="total" id="food" type="text" placeholder="Food cost"></input>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div id="secondhalf">
+      <table id="ColdWater">
+        <tr>
+          <p>Cold Water</p>
+          <td>
+            <input name="counter" type="text" placeholder="Water counter data"></input>
+          </td>
+          <td>
+            <input name="period" type="text" placeholder="Monthly"></input>
+          </td>
+          <td>
+            <input name="rate" type="text" placeholder="Rate"></input>
+          </td>
+        </tr>
+      </table>
+      <table id="HotWater">
+        <tr>
+          <p>Hot Water</p>
+          <td>
+            <input name="counter" type="text" placeholder="Water counter data"></input>
+          </td>
+          <td>
+            <input name="period" type="text" placeholder="Monthly"></input>
+          </td>
+          <td>
+            <input name="rate" type="text" placeholder="Rate"></input>
+          </td>
+        </tr>
+      </table>
+      <table id="Internet">
+        <tr>
+          <p>Internet</p>
+          <td>
+            <input name="total" id="internet" type="text" placeholder="Internet cost"></input>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <input id="sbmt" type="submit">
   </form>
-
-  <tr>
-    <th>Electrcity</th>
-    <th>Water</th>
-    <th>Gas</th>
-    <th>Internet</th>
-    <th>Food</th>
-  </tr>
-
   </table>
-
+  <div id="result"></div>
   <script src="index.js"></script>
 </body>
 
