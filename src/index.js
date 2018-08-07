@@ -69,20 +69,31 @@ window.addEventListener("load", function(datacheck) {
           [input.name]: Number(input.value) || 0
         };
       });
-      let previousmonth = months.find( (month , index) => {
+      let previousmonth = months.find((month, index) => {
         let curmonth = new Date(month.date.year + " " + month.date.month);
         let nextmonth = months[index + 1];
-        let nextmonthd = new Date (nextmonth.date.year + " " + nextmonth.date.month );
         let inputyear = document.querySelector("#yearfield").value;
         let inputmonth = document.querySelector("#monthslist").value;
-        let inputdate = new Date (inputyear + " " + inputmonth);
-        return curmonth < inputdate && nextmonthd > inputdate;
+        let inputdate = new Date(inputyear + " " + inputmonth);
+        if (!nextmonth) {
+          return curmonth < inputdate;
+        } else {
+          let nextmonthd = new Date(
+            nextmonth.date.year + " " + nextmonth.date.month
+          );
+          return curmonth < inputdate && nextmonthd > inputdate;
+        }
       });
+      const previouscounter = !previousmonth
+        ? initialdata[key]
+        : previousmonth[key].data.counter;
       finaldata = {
         ...finaldata,
         [key]: {
           ...data,
-          total: data.counter * data.rate + data.period || data.total
+          total:
+            (data.counter - previouscounter) * data.rate + data.period ||
+            data.total
         }
       };
     });
@@ -91,8 +102,8 @@ window.addEventListener("load", function(datacheck) {
       date: {
         year: document.getElementById("yearfield").value,
 
-        month: document.getElementById("monthslist").value,
-      };
+        month: document.getElementById("monthslist").value
+      }
     };
     console.log(finaldata);
     months.push(finaldata);
